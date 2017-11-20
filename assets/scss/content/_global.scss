@@ -1,0 +1,229 @@
+*{ @include border-box(); }
+
+html{
+	-webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  text-rendering: optimizelegibility;
+
+}
+body{
+	font-family: $font-body1;
+
+	h1,h2,h3,h4,h5{
+		font: 1em/1.5 $font-heading1;
+		font-weight: normal;
+	}
+
+
+	p{
+		font-family: $font-body1;
+	}
+
+	strong, em{
+		font-family: $font-body3;
+	}
+
+
+
+	blockquote{
+		background: $grey_bg;
+		padding: 20px 0px;
+		border: 1px solid $grey_light;
+		@include rounded(4px);
+		margin: 40px 8%;
+		font-size: 1.1em;
+		line-height: 26px;
+		p{
+			font-family: $font-heading1;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	ul, ol{
+		li{
+			font-family: $font-body1;
+			font-size: 0.9em;
+		}
+	}
+
+	dl{
+		dt{
+			font-family: $font-body3;
+			clear: both;
+
+		}
+		dd{
+			font-family: $font-body1;
+			font-size: 0.9em;
+		}
+	}
+
+	table{
+		width: 80%;
+		margin: 0 auto;
+		tr th{
+			font-family: $font-heading1;
+		}
+		tr td{
+			font-family: $font-body1;
+			font-size: 0.9em;
+			text-align: left;
+			@media screen and (max-width: $BP4){
+				font-size: 0.7em;
+			}
+		}
+	}
+
+	hr{
+		// @include column(10);
+		// @include push(1);
+		// @include pull(1);
+		// margin-top: 40px;
+		// margin-bottom: 60px;
+
+	}
+
+	a{
+		color: $color2_1;
+		border-width: 2px;
+		font-weight: bold;
+		&:hover{
+			color: $color1_1;
+		}
+	}
+
+	a.button, input[type="submit"]{
+		@include rounded(4px);
+		color: white;
+		border-radius: 100px;
+		font-weight: 600;
+		background: $color2_1;
+		&:hover{
+			background: $color2_2;
+			border-color: $color2_2;
+		}
+
+		@media screen and (max-width: $BP3) {
+			padding: 10px 30px;
+			display: block;
+			margin-bottom: 15px;
+
+		}
+
+	}
+
+	.main_content{
+		max-width: $max-width;
+		margin: 0 auto;
+		@include clearfix();
+
+		@media screen and (max-width: $BP8) {
+			max-width: $BP8w;
+		}
+		@media screen and (max-width: $BP7) {
+			max-width: $BP7w;
+		}
+		@media screen and (max-width: $BP6) {
+			max-width: $BP6w;
+		}
+		@media screen and (max-width: $BP5) {
+			max-width: $BP5w;
+		}
+		@media screen and (max-width: $BP4) {
+			max-width: $BP4w;
+			text-align: center;
+		}
+		@media screen and (max-width: $BP3) {
+			max-width: $BP3w;
+		}
+		@media screen and (max-width: $BP2) {
+			max-width: $BP2w;
+		}
+		@media screen and (max-width: $BP1) {
+			max-width: $BP1w;
+		}
+		@media screen and (max-width: $BP0) {
+			max-width: $BP0w;
+		}
+
+
+		.colgroup_1{
+			.col{
+				@include column(12);
+				@include clearfix();
+			}
+		}
+
+		.colgroup_2{
+			.col{
+				@include column(6);
+				@include clearfix();
+			}
+		}
+
+		.colgroup_3{
+			.col{
+				@include column(4);
+				@include clearfix();
+			}
+		}
+
+		.colgroup_4{
+			.col{
+				@include column(3);
+				@include clearfix();
+			}
+		}
+
+		.colgroup_5{
+			.col{
+				@include column(2.4);
+				@include clearfix();
+			}
+		}
+
+		.colgroup_6{
+			.col{
+				@include column(2);
+				@include clearfix();
+			}
+		}
+
+		.colgroup_1, .colgroup_2, .colgroup_3, .colgroup_4, .colgroup_5, .colgroup_6{
+			@include clearfix();
+
+			@media screen and (max-width: $BP4) {
+				.col{
+					@include column(10);
+					@include push(1.2);
+					@include pull(0.8);
+				}
+			}
+		}
+
+
+	}
+
+	.craft-visor.craft-visor--override{
+
+		::after{
+			background: rgba(0,0,0,.20);
+		}
+
+		.craft-visor__modal{
+			background: none;
+			box-shadow: none;
+		}
+
+		.craft-visor__nav{
+			width: 100%;
+			border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+		}
+
+		.craft-visor__nav a{
+			width: 25%;
+		}
+	}
+}

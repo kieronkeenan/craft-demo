@@ -1,0 +1,36 @@
+{% extends "_layout" %}
+
+{% set title = "Examples" %}
+
+{% block content %}
+
+{% paginate craft.entries.section('examples').limit(10) as pageInfo, pageEntries %}
+
+{% for entry in pageEntries %}
+    <article>
+      <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+			{{ entry.body.getPage(1) }}
+			<p><a href="{{ entry.url }}">Continue reading</a></p>
+    </article>
+{% endfor %}
+
+<hr>
+ {% if pageInfo.prevUrl %}<a href="{{ pageInfo.prevUrl }}">Previous Page</a>{% endif %}
+
+	{% for page, url in pageInfo.getPrevUrls(5) %}
+	    <a href="{{ url }}">{{ page }}</a>
+	{% endfor %}
+
+	{% for page, url in pageInfo.getPrevUrls(5) %}
+	    <a href="{{ url }}">{{ page }}</a>
+	{% endfor %}
+
+	<span class="current">{{ pageInfo.currentPage }}</span>
+
+	{% for page, url in pageInfo.getNextUrls(5) %}
+	    <a href="{{ url }}">{{ page }}</a>
+	{% endfor %}
+
+	{% if pageInfo.nextUrl %}<a href="{{ pageInfo.nextUrl }}">Next Page</a>{% endif %}
+
+	{% endblock %}

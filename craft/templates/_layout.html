@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+
+	<link rel="shortcut icon" href="/favicon.ico?v=2" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link media="screen" rel="stylesheet" type="text/css" href="/assets/css/style.css"> -->
+	<script src="/assets/js/src/modernizr-latest.js"></script>
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+	<meta name='keywords' content='' />
+	<meta name='description' content='' />
+
+</head>
+
+<body>
+
+  <form action="{{ url('search/results') }}">
+    <input type="search" name="q" placeholder="Search">
+    <input type="submit" value="Go">
+</form>
+
+  <a href="/" {% if craft.request.firstSegment == '' %}class="active"{% endif %}>Home</a>
+
+				<a href="{{ url('examples') }}" {% if craft.request.firstSegment == 'examples' %}class="active"{% endif %}>Examples</a>
+        <br>
+
+		<main id="content" role="main">
+			{% block content %}
+				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+			{% endblock %}
+		</main>
+
+			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}</a>
+
+{% hook "addVisor" %}
+</body>
+</html>

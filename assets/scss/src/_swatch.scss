@@ -1,0 +1,82 @@
+/**
+ * Site Colours
+ */
+
+$white: #fff;
+$white1_1_1: rgba(255, 255, 255, 0.1);
+$white1_1: rgba(255, 255, 255, 0.2);
+$white1_2: rgba(255, 255, 255, 0.4);
+$white1_3: rgba(255, 255, 255, 0.6);
+$white1_4: rgba(255, 255, 255, 0.8);
+
+
+ /* Link colors */
+$link: #8CAC62;
+$link_hover: #718C4F;
+
+/* Select colors */
+$select: #1F2435;
+$select_color: #fff;
+
+/* Default Colors */
+$grey_bg: #F9F9F9;
+$grey_light: #eee;
+$grey_regular: #aaa;
+$grey_dark: #888;
+$grey_tag: #aaaaaa;
+$grey_border: #dddddd;
+
+$blue: #2e629a;
+$red: #de5532;
+$green: #7EB146;
+$green_hover: darken($green,8%);
+
+
+/* Custom Colors */
+
+$nav1_1: #333;
+
+$color1_1: #1F2435; //
+$color1_2: #950000; //
+$color1_3: #D60105; //
+$color1_4: #FA3D3B; //
+$color1_5: #C34534;
+
+$color2_1: #639653;
+$color2_2: #4F7843;
+
+$p0: #950000;
+$p1: #D60105;
+$p2: #FA3D3B;
+$p3: #DF7A20;
+$p4: #F99100;
+$p5: #F2B500;
+$p6: #FECA32;
+$p7: #9CC34C;
+$p8: #7FA136;
+$p9: #66832B;
+
+
+
+
+
+/* Notice Colours */
+$warning:				#FCCE00;
+$warning-color: 		darken($warning,8%);
+$warning-background:	lighten($warning,45%);
+$warning-border: 		#EAC000;
+
+$danger:				$red;
+$danger-color: 			darken($danger,8%);
+$danger-background:		lighten($danger,25%);
+$danger-border: 		darken(adjust-hue($danger-background, -10), 5%);
+
+$info:					$blue;
+$info-color: 			darken($info,20%);
+$info-background:		lighten($info,45%);
+$info-border: 			darken(adjust-hue($info-background, -10), 5%);
+
+$success:				$green;
+$success-color: 		darken($success,20%);
+$success-background:	lighten($success,30%);
+$success-border: 		darken(adjust-hue($success-background, -10), 5%);
