@@ -24,14 +24,11 @@ module.exports = function(grunt)
             },
             build: {
                 src: [
-                    // 'js/src/jribbble.js',
-                    // 'js/src/dribbble.js',
-                    // 'js/src/jquery.typer.js',
-                    // 'js/src/parallax.js',
-                    // 'js/src/dribbbler.js',
-                    // 'js/src/jquery.scrolly.js',
-                    // 'js/src/bookmark.js',
-                    // 'js/src/jquery.validate.js',
+                    'js/src/jquery.typer.js',
+                    'js/src/parallax.js',
+                    'js/src/jquery.scrolly.js',
+                    'js/src/bookmark.js',
+                    'js/src/jquery.validate.js',
                     'js/script.js'
                 ],
                 dest: 'js/script.min.js'

@@ -31,10 +31,8 @@ JsonRenderer.prototype.error = function (err) {
     err.message = message;
 
     // Stack
-    /*jshint camelcase:false*/
     stack = err.fstream_stack || err.stack || 'N/A';
     err.stacktrace = (Array.isArray(stack) ? stack.join('\n') : stack);
-    /*jshint camelcase:true*/
 
     this.log(err);
     this.end();
@@ -120,8 +118,6 @@ JsonRenderer.prototype.prompt = function (prompts) {
         return answers;
     });
 };
-
-JsonRenderer.prototype.updateNotice = function () {};
 
 // -------------------------
 

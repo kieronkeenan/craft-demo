@@ -3,14 +3,14 @@
 /* ========================================================== */
 $gutter_width: 30px; // Your gutter width
 $columns: 12; // The amount of columns you want
-$max_width: 1440px; // Set a maximum width of the site. Design for 1000px but breakpoint for larger screens.
+$max_width: 100%; // Set a maximum width of the site. Design for 1000px but breakpoint for larger screens.
 
 // Half the gutter for borders, margin, padding etc
 $gutter: $gutter_width*0.5;
 
 // Defaults which you can freely override
 $column-width: 60;
-$gutter-width: 30;
+$gutter-width: 20;
 $columns: 12;
 
 // Set $total-width to 100% for a fluid layout
@@ -25,6 +25,14 @@ $correction: 0.5 / $max_width * 100 * 1%; // NOTE: Check this in IE
 $gridsystem-width: ($column-width*$columns) + ($gutter-width*$columns);
 $margin: $total-width*(($gutter-width*.5)/$gridsystem-width);
 
+
+$size_0: 4px;
+$size_1: 8px;
+$size_2: 16px;
+$size_3: 24px;
+$size_4: 32px;
+$size_5: 40px;
+$size_6: 48px;
 
 /* Our row container */
 @mixin row($padding:0)
